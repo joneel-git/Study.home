@@ -9,9 +9,14 @@
 
             if (mycar is E)
             {
-                System.Console.WriteLine();
-                System.Console.WriteLine();
+                System.Console.WriteLine("our car is a: " + ecar.name);
+
             }
+            else
+            {
+                System.Console.WriteLine("our car is a: " + mycar.name);
+            }
+            Console.ReadLine();
         }
     }
 }
@@ -28,6 +33,7 @@ class Car
 }
 class E : Car
 {
+    //sharing fields from Car using constructor
     public E(string c, int g) : base(c, g)
     {
         name = c;
