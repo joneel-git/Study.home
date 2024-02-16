@@ -10,6 +10,7 @@
             if (mycar is E)
             {
                 System.Console.WriteLine();
+                System.Console.WriteLine();
             }
         }
     }
