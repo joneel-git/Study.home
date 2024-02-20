@@ -4,19 +4,28 @@ namespace EventHandling
     {
         public string name = ""; //fields
         public int gasLevel = 0; //fields
-        public Car(string c, int g)
+        public Car(string n, int g)
         {
-            name = c;
+            name = n;
             gasLevel = g;
         }
+        public virtual void Drive()
+        {
+            Console.WriteLine("Motor_Engine goes Vroom.. ");
+        }
+
     }
     public class E : Car
     {
         //sharing fields from Car using constructor
-        public E(string c, int g) : base(c, g)
+        public E(string n, int g) : base(n, g)
         {
-            name = c;
+            name = n;
             gasLevel = g;
+        }
+        public override void Drive()
+        {
+            Console.WriteLine("Electric_Engine go SssssHhhh  not Vroom.. ");
         }
     }
 }
