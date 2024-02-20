@@ -15,25 +15,30 @@ namespace EventHandling
             Console.WriteLine("Motor_Engine go VrOOooom.. ", color);
         }
         //-----------------------------------
+        ConsoleColor defaultColor = Console.ForegroundColor; //storing default color
         public int GasSimulation()
         {
-            ConsoleColor color = Console.ForegroundColor; //default color
+
             int gasLevel = this.gasLevel;
 
             void Sleep()
             {
-                Console.WriteLine("\n Sad to see you go..", color);
+                ConsoleColor color = Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\n Sad to see you go.. ", color);
                 Thread.Sleep(1000);
             }
             bool choice = true;
             do
             {
-                Console.Write(" Do you want to continue? y/n (enter) ", color);
+                Console.ForegroundColor = defaultColor; // Reset to default color
+                Console.Write(" Do you want to continue? y/n (enter) ");
                 ConsoleKeyInfo info = Console.ReadKey();
                 if (info.Key == ConsoleKey.Enter)
                 {
+                    ConsoleColor color = Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("\nPlease enter either y/n ", color);
+                    Console.Write("");
                     choice = true;
-                    continue;  //current bug nothing happens when clicking enter..
                 }
                 else if (info.Key == ConsoleKey.N)
                 {
@@ -45,6 +50,7 @@ namespace EventHandling
                 {
                     if (gasLevel == 0)
                     {
+
                         Console.WriteLine("\n We are out pf Gas ..S " + gasLevel);
                         choice = false;
                         break;
@@ -60,6 +66,7 @@ namespace EventHandling
                 else
                 {
                     choice = false;
+                    break;
                 }
             } while (choice);
             return gasLevel;
@@ -91,7 +98,7 @@ namespace EventHandling
         }
         public void PutHelmetOn()
         {
-            ConsoleColor color = Console.ForegroundColor = ConsoleColor.Red;
+            ConsoleColor color = Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Helmet feels nice on the head.. ", color);
         }
     }
