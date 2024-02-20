@@ -33,7 +33,7 @@ namespace EventHandling
                 if (info.Key == ConsoleKey.Enter)
                 {
                     choice = true;
-                    continue;
+                    continue;  //current bug nothing happens when clicking enter..
                 }
                 else if (info.Key == ConsoleKey.N)
                 {
