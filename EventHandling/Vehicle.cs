@@ -11,13 +11,13 @@ namespace EventHandling
         }
         public virtual void Drive()
         {
-            var color = Console.ForegroundColor = ConsoleColor.Green;
+            ConsoleColor color = Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Motor_Engine go VrOOooom.. ", color);
         }
         //-----------------------------------
         public int GasSimulation()
         {
-            var color = Console.ForegroundColor; //default color
+            ConsoleColor color = Console.ForegroundColor; //default color
             int gasLevel = this.gasLevel;
 
             void Sleep()
@@ -76,7 +76,7 @@ namespace EventHandling
         }
         public override void Drive()
         {
-            var color = Console.ForegroundColor = ConsoleColor.Yellow;
+            ConsoleColor color = Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Electric_Engine go SssssHhhh  not Vroom.. ", color);
 
         }
@@ -91,7 +91,7 @@ namespace EventHandling
         }
         public void PutHelmetOn()
         {
-            var color = Console.ForegroundColor = ConsoleColor.Red;
+            ConsoleColor color = Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Helmet feels nice on the head.. ", color);
         }
     }
