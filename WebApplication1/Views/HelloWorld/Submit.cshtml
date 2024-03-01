@@ -1,0 +1,33 @@
+@using WebApplication1.Controllers
+@model MyModel
+@using (Html.BeginForm("Submit", "HelloWorld", FormMethod.Get))
+{
+    <table>
+        <tr>
+            <td>Enter ID: </td>
+            <td>@Html.TextBox("Id")</td>
+        </tr>
+        <tr>
+            <td>Enter Title: </td>
+            <td>@Html.TextBox("Title")</td>
+        </tr>
+        <tr>
+            <td>Enter Name: </td>
+            <td>@Html.TextBox("Name")</td>
+        </tr>
+        <tr>
+            <td>Enter DateTime: </td>
+            <td>@Html.TextBox("dateTime")</td>
+        </tr>
+        <tr colspan="2">
+            <input type="submit" value="Submit">
+        </tr>
+    </table>
+}
+
+<h4 style="color:purple">
+    ID: @ViewBag.Id
+    Title: @ViewBag.Title
+    Name: @ViewBag.Name
+    DateTime: @ViewBag.DateTime
+</h4>
