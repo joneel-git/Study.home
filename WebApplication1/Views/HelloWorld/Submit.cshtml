@@ -26,8 +26,11 @@
 }
 
 <h4 style="color:purple">
-    ID: @ViewBag.Id
-    Title: @ViewBag.Title
-    Name: @ViewBag.Name
-    DateTime: @ViewBag.DateTime
+    @{
+        MyModel model = new MyModel();
+    }
+    ID: @Model.Id
+    Title: @Model.Title
+    Description: @Model.Description
+    DateTime: @Model.DateTime
 </h4>
