@@ -9,7 +9,7 @@ namespace WebApplication1.Models
     {
         public int Id { get; set; }
         public string Title { get; set; } = string.Empty;
-        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
         public DateTime dateTime { get; set; }
 
     }

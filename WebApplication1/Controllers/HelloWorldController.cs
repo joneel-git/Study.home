@@ -21,7 +21,7 @@ namespace WebApplication1.Views.Home
             MyModel model = new MyModel();
             ViewBag.Id = model.Id;
             ViewBag.Title = model.Title;
-            ViewBag.Name = model.Name;
+            ViewBag.Name = model.Description;
             ViewBag.DateTime = DateTime.Now;
             //Viewbag is tool for passing data from a controller to view
             return View();
